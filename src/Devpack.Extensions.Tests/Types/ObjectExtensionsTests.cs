@@ -6,7 +6,7 @@ using System;
 using System.Text.Json;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class ObjectExtensionsTests : UnitTestBase
     {

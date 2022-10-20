@@ -4,7 +4,7 @@ using Devpack.Extensions.Types;
 using FluentAssertions;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class EnumExtensionsTests : UnitTestBase
     {

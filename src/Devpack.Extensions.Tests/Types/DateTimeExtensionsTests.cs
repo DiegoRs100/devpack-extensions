@@ -4,7 +4,7 @@ using FluentAssertions;
 using System;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class DateTimeExtensionsTests : UnitTestBase
     {

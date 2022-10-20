@@ -2,7 +2,7 @@
 {
     public static class StreamExtensions
     {
-        public static async Task<string> ReadToStringAsync(this Stream stream)
+        public static async Task<string> ReadAsStringAsync(this Stream stream)
         {
             stream.Position = 0;
 

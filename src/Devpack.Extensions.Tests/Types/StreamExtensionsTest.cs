@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class StreamExtensionsTest
     {
@@ -13,10 +13,10 @@ namespace Devpack.Extensions.Tests.Extensions
         [InlineData("Primeiro Texto para a Stream")]
         [InlineData("Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...")]
         [InlineData("Outro texto aleatório")]
-        public async Task ReadToStringAsync_WhenReadString(string text)
+        public async Task ReadAsStringAsync_WhenReadString(string text)
         {
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(text));
-            var streamAsString = await stream.ReadToStringAsync();
+            var streamAsString = await stream.ReadAsStringAsync();
 
             text.Should().Be(streamAsString);
         }

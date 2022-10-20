@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class StringExtensionsTests : UnitTestBase
     {

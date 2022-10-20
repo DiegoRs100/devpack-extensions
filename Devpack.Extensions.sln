@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devpack.Extensions", "src\D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devpack.Extensions.Tests", "src\Devpack.Extensions.Tests\Devpack.Extensions.Tests.csproj", "{18D6DF8E-5367-4CA2-9808-12E85B273D3D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95C012CC-5033-4E0A-8D69-B1D7D7CC84B1}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.MD = CHANGELOG.MD
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

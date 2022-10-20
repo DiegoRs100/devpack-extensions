@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using Xunit;
 
-namespace Devpack.Extensions.Tests.Extensions
+namespace Devpack.Extensions.Tests.Types
 {
     public class ReflectionExtensionsTests : UnitTestBase
     {
