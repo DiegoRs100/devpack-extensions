@@ -204,6 +204,8 @@ Console.WriteLine($"Value: {result}.");
     // Has value in any? true.
 ```
 
+### UrlHelper
+
 | Return Type | Method |
 | --------------- | ------- |
 | string | UseEndpointFormat(string text) |
