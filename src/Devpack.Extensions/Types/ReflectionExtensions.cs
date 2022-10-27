@@ -5,6 +5,8 @@ namespace Devpack.Extensions.Types
 {
     public static class ReflectionExtensions
     {
+        private static readonly BindingFlags PrivateBindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+
         public static TAttribute? GetAttribute<TAttribute>(this MemberInfo memberInfo) where TAttribute : Attribute
         {
             if (memberInfo.HasAttribute<TAttribute>())
@@ -17,8 +19,6 @@ namespace Devpack.Extensions.Types
         {
             return memberInfo.GetCustomAttributes(typeof(TAttribute), false).Length > 0;
         }
-
-        private static readonly BindingFlags PrivateBindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
 
         public static object? GetPropertyValue<TCLass>(this TCLass obj, string propertyName) where TCLass : class
         {

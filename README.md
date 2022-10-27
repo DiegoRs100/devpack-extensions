@@ -125,6 +125,10 @@ Console.WriteLine($"this object exists in source list? {result}");
 | --------------- | ------- |
 | TAttribute? | GetAttribute<TAttribute>() |
 | bool| HasAttribute<TAttribute>() |
+| object? | GetPropertyValue<TCLass>() |
+| TCLass | SetPropertyValue<TCLass>() |
+| object? | GetFieldValue<TCLass>() |
+| void | SetFieldValue<TCLass>() |
 
 ### Stream
 
@@ -177,6 +181,12 @@ Console.WriteLine($"Value: {result}.");
 // Output
 // Value: ****-****-****-4554.
 ```
+
+### ExceptionExtensions
+
+| Return Type | Method |
+| --------------- | ------- |
+| Dictionary<string, string> | ToDictionary<TException>() |
 
 # Helper methods
 
