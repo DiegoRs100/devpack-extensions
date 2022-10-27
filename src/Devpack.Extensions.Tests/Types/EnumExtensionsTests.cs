@@ -9,7 +9,7 @@ namespace Devpack.Extensions.Tests.Types
     public class EnumExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar a descrição do membro de um enum quando o atributo 'Description' está presente")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void GetDescription_ReturnsEnumMemberDescription()
         {
             var description = "Valor 1";
@@ -19,7 +19,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar o nome do membro de um enum quando o atributo 'Description' não está presente")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void GetDescription_ReturnsEnumMemberName()
         {
             var description = nameof(EnumTest.Valor2);

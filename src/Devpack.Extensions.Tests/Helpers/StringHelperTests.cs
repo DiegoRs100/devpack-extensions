@@ -8,7 +8,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
     public class StringHelperTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar verdadeiro quando ao menos um dos valores for diferente de nulo e vazio.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void HasValueInAny_BeTrue()
         {
             //Arrange
@@ -22,7 +22,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
         }
 
         [Fact(DisplayName = "Deve retornar falso quando todos os valores forem nulos ou vazios.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void HasValueInAny_BeFalse()
         {
             //Arrange

@@ -13,7 +13,7 @@ namespace Devpack.Extensions.Tests.Types
     public class ReflectionExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar o atributo de uma propriedade quando ele existir na mesma.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void GetAttribute()
         {
             //Arrange
@@ -29,7 +29,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando um atributo existir em uma propriedade.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasAttribute_BeTrue()
         {
             //Arrange
@@ -44,7 +44,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando um atributo não existir em uma propriedade.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasAttribute_BeFalse()
         {
             //Arrange

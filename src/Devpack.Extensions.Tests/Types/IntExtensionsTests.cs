@@ -8,7 +8,7 @@ namespace Devpack.Extensions.Tests.Types
     public class IntExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retotnar verdadeiro quando um inteiro estiver dentro de um range específico.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsBetween_BeTrue()
         {
             //Arrange
@@ -24,7 +24,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retotnar falso quando um inteiro estiver fora de um range específico.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void Between_BeFalse()
         {
             //Arrange

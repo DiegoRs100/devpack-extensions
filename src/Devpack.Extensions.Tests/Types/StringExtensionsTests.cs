@@ -22,7 +22,7 @@ namespace Devpack.Extensions.Tests.Types
         [Theory(DisplayName = "Deve retornar verdadeiro quando uma string é passada vazia ou nula.")]
         [InlineData(Empty)]
         [InlineData(null)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrEmpty_BeTrue(string text)
         {
             text.IsNullOrEmpty().Should().BeTrue();
@@ -31,14 +31,14 @@ namespace Devpack.Extensions.Tests.Types
         [Theory(DisplayName = "Deve retornar falso quando uma string é passada com algum preenchimento.")]
         [InlineData("abc")]
         [InlineData(Space)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrEmpty_BeFalse(string text)
         {
             text.IsNullOrEmpty().Should().BeFalse();
         }
 
         [Fact(DisplayName = "Deve remover um trecho de texto quando ele estiver presente dentro de uma string.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void RemoveText_UsingString()
         {
             //Arrange
@@ -60,7 +60,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve remover um trecho de texto quando ele estiver presente dentro de uma string usando Regex.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void RemoveText_UsingRegex()
         {
             //Arrange
@@ -106,7 +106,7 @@ namespace Devpack.Extensions.Tests.Types
         [Theory(DisplayName = "Deve remover a acentuação de uma string quando a mesma contiver qualquer tipo de acentuação.")]
         [InlineData(AlphaNumeric, AlphaNumeric)]
         [InlineData("asáçãàê", "asacaae")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void RemoveGrammarAccents(string text, string result)
         {
             text.RemoveGrammarAccents().Should().Be(result);
@@ -115,7 +115,7 @@ namespace Devpack.Extensions.Tests.Types
         [Theory(DisplayName = "Deve retornar uma string vazia quando a mesma for nula.")]
         [InlineData(null, Empty)]
         [InlineData(AlphaNumeric, AlphaNumeric)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void NullAsEmpty(string text, string result)
         {
             text.NullAsEmpty().Should().Be(result);
@@ -124,7 +124,7 @@ namespace Devpack.Extensions.Tests.Types
         [Theory(DisplayName = "Deve retornar nulo quando passado uma string vazia.")]
         [InlineData(Empty, null)]
         [InlineData(AlphaNumeric, AlphaNumeric)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void EmptyAsNull(string text, string result)
         {
             text.EmptyAsNull().Should().Be(result);
@@ -136,7 +136,7 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData("tesTe", "Teste")]
         [InlineData(Empty, Empty)]
         [InlineData(null, Empty)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void Captalize_RetornaStringNoFormatoCaptalize(string text, string result)
         {
             "teste para o uso do método de capitalização.".Captalize();
@@ -148,7 +148,7 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData("1458-5885-6263-4554", "****-****-****-4554")]
         [InlineData(Empty, Empty)]
         [InlineData(null, Empty)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void MaskCharacters_WhenFixMask(string text, string result)
         {
             text.MaskCharacters('*', 12).Should().Be(result);
@@ -159,7 +159,7 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData("1458-5885-6263-4554", "****-****-****-****")]
         [InlineData(Empty, Empty)]
         [InlineData(null, Empty)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void MaskCharacters_WhenNotFixMask(string text, string result)
         {
             text.MaskCharacters('*').Should().Be(result);
@@ -293,7 +293,7 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData(Empty)]
         [InlineData(Space)]
         [InlineData(null)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrWhiteSpace_BeTrue(string text)
         {
             text.IsNullOrWhiteSpace().Should().BeTrue();
@@ -301,7 +301,7 @@ namespace Devpack.Extensions.Tests.Types
 
         [Theory(DisplayName = "Deve retornar falso quando uma string é passada com algum preenchimento.")]
         [InlineData("abc")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrWhiteSpace_BeFalse(string text)
         {
             text.IsNullOrWhiteSpace().Should().BeFalse();
@@ -313,14 +313,14 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData("12 5")]
         [InlineData("")]
         [InlineData(null)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasOnlyDigits_BeFalse(string text)
         {
             text.HasOnlyDigits().Should().BeFalse();
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando a string informada contém caracteres que não são numéricos.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasOnlyDigits_BeTrue()
         {
             var text = _faker.Random.Number(1000, 5000).ToString();
@@ -333,14 +333,14 @@ namespace Devpack.Extensions.Tests.Types
         [InlineData("dsda a")]
         [InlineData("")]
         [InlineData(null)]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasOnlyLetters_BeFalse(string text)
         {
             text.HasOnlyLetters().Should().BeFalse();
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando a string informada contém caracteres que não são letras.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void HasOnlyLetters_BeTrue()
         {
             var text = _faker.Random.String2(10);

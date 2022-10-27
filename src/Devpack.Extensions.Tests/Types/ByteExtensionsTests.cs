@@ -10,7 +10,7 @@ namespace Devpack.Extensions.Tests.Types
     public class ByteExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve gerar um hexadecimal quando passado um array de bytes.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ToHexadecimal()
         {
             //Arrange

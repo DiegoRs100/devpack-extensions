@@ -10,7 +10,7 @@ namespace Devpack.Extensions.Tests.Types
     {
         [Fact(DisplayName = "Deve retornar a data de acordo com o fuso horário de São Paulo " +
             "quando o método ConvertTimeToSouthAmericaZone for chamado.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ConvertTimeToSouthAmericaZone()
         {
             var utcDate = DateTime.UtcNow;

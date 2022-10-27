@@ -8,7 +8,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
     public class UrlHelperTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve formatar uma string bo padrão url quando ela for passada desnormalizada.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void FormatToUrl_WhenSuccess()
         {
             var url = "Jornal DO--métrô";
@@ -16,7 +16,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
         }
 
         [Theory(DisplayName = "Deve retornar uma string em branco quando ela for passada como nula ou vazia em 'url'.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         [InlineData(Empty)]
         [InlineData(null)]
 
@@ -26,7 +26,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
         }
 
         [Fact(DisplayName = "Deve montar uma url quando diversos pedaços dela forem passados.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void Combine()
         {
             var urlPrefix = _faker.Internet.Url();

@@ -11,7 +11,7 @@ namespace Devpack.Extensions.Tests.Types
     public class ObjectExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar verdadeiro quando um elemento existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void In_BeTrue()
         {
             //Arrange
@@ -25,7 +25,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando um elemento não existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void In_BeFalse()
         {
             //Arrange
@@ -39,7 +39,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando um elemento não existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void NotIn_BeTrue()
         {
             //Arrange
@@ -53,7 +53,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando um elemento existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void NotIn_BeFalse()
         {
             //Arrange
@@ -67,7 +67,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar objeto serializado quando um objeto válido for passado.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ToJson()
         {
             //Arrange
@@ -87,7 +87,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar true quando um objeto for nulo.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNull_BeTrue()
         {
             //Arrange
@@ -102,7 +102,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar false quando um objeto não for nulo.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNull_BeFalse()
         {   
             //Arrange

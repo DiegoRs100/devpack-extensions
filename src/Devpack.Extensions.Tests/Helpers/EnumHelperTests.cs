@@ -11,7 +11,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
     public class EnumHelperTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar um enumerable quando o atributo do tipo 'Description' estiver presente no mesmo.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void GetByDescription_WhenDescriptionAttribute()
         {
             var result = EnumHelper.GetByDescription<EnumTest>(EnumTest.Valor1.GetDescription());
@@ -19,7 +19,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
         }
 
         [Fact(DisplayName = "Deve retornar um enumerable quando uma das opções do enum tiver o nome igual ao nome buscado.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void GetByDescription_WhenWithoutDescriptionAttribute()
         {
             var result = EnumHelper.GetByDescription<EnumTest>(nameof(EnumTest.Valor2));
@@ -27,7 +27,7 @@ namespace SiteMercado.Foundation.Extensions.Tests.Helpers
         }
 
         [Fact(DisplayName = "Deve retornar nulo quando o nome produrado não representar nenhuma das opções do enum.")]
-        [Trait("Categoria", "Helpers")]
+        [Trait("Category", "Helpers")]
         public void GetByDescription_DeveRetornarNulo()
         {
             var result = EnumHelper.GetByDescription<EnumTest>(Guid.NewGuid().ToString());

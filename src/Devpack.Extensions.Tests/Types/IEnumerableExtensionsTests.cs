@@ -12,7 +12,7 @@ namespace Devpack.Extensions.Tests.Types
     public class IEnumerableExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar verdadeiro quando uma lista for nula.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrEmpty_BeTrue_WhenNull()
         {
             //Arrange
@@ -26,7 +26,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando uma lista estiver vazia.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrEmpty_BeTrue_WhenEmpty()
         {
             //Arrange
@@ -40,7 +40,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando uma lista contiver valores.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsNullOrEmpty_BeFalse()
         {
             //Arrange
@@ -54,7 +54,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar uma lista contendo valores unicos quando uma lista com valores repetidos for passada.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void Distinct()
         {
             //Arrange
@@ -82,7 +82,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando ao menos um dos valores indicados existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ContainsAny_BeTrue()
         {
             //Arrange
@@ -97,7 +97,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando nenhum dos valores indicados existe dentro de uma lista.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ContainsAny_BeFalse()
         {
             //Arrange
@@ -112,7 +112,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar uma lista contendo apenas o objeto com maior valor quando uma lista válida é passada.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void GroupByMaxValue()
         {
             //Arrange
@@ -141,7 +141,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar verdadeiro quando uma lista é passada contendo dois valores chave duplicados.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsDuplicated_BeTrue()
         {
             // Arrange
@@ -161,7 +161,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve retornar falso quando uma lista é passada com todos os valores chave diferentes entre si.")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void IsDuplicated_BeFalse()
         {
             // Arrange
@@ -179,7 +179,7 @@ namespace Devpack.Extensions.Tests.Types
         }
 
         [Fact(DisplayName = "Deve executar e retornar uma ação para cada item da coleção")]
-        [Trait("Categoria", "Extensions")]
+        [Trait("Category", "Extensions")]
         public void ForEach()
         {
             var enumerable = Enumerable.Range(0, 100);
