@@ -6,10 +6,13 @@
 
 ## 6.0.2.0 - 2022-10-26
 
-- Reflection methods created:
- - GetPropertyValue();
- - SetPropertyValue();
- - GetFieldValue();
- - SetFieldValue().
-- Exception methods created:
- - ToDictionary().
+- Reflection methods created;
+- GetPropertyValue();
+- SetPropertyValue();
+- GetFieldValue();
+- SetFieldValue().
+
+## 6.0.3.0 - 2022-10-26
+
+- Exception methods created;
+- ToDictionary().
