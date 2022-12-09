@@ -346,5 +346,52 @@ namespace Devpack.Extensions.Tests.Types
             var text = _faker.Random.String2(10);
             text.HasOnlyLetters().Should().BeTrue();
         }
+
+        [Theory(DisplayName = "Deve retornar o valor original do texto quando ele não possuir letras maiúsculas.")]
+        [InlineData("testeunitario")]
+        [InlineData(Space)]
+        [InlineData(Empty)]
+        [InlineData(null)]
+        [Trait("Category", "Extensions")]
+        public void ToSnakeCase_WhenIsNullOrEmpty(string text)
+        {
+            var result = text.ToSnakeCase();
+            result.Should().Be(text);
+        }
+
+        [Theory(DisplayName = "Deve formatar em snake case quando um texto separado por letras maiúsculas for passado.")]
+        [InlineData("Testeunitario", "testeunitario")]
+        [InlineData("TesteUnitarioFim", "teste_unitario_fim")]
+        [InlineData("testeunitariO", "testeunitari_o")]
+        [Trait("Category", "Extensions")]
+        public void ToSnakeCase_WhenValidText(string text, string formatedText)
+        {
+            var result = text.ToSnakeCase();
+            result.Should().Be(formatedText);
+        }
+
+        [Theory(DisplayName = "Deve retornar o valor original do texto quando ele for nulo ou vazio.")]
+        [InlineData(Space)]
+        [InlineData(Empty)]
+        [InlineData(null)]
+        [Trait("Category", "Extensions")]
+        public void ToCamelCase_WhenIsNullOrEmpty(string text)
+        {
+            var result = text.ToCamelCase();
+            result.Should().Be(text);
+        }
+
+        [Theory(DisplayName = "Deve formatar em camel case quando um texto for passado.")]
+        [InlineData("testeunitario", "Testeunitario")]
+        [InlineData("teste_unitario_fim", "TesteUnitarioFim")]
+        [InlineData("testeunitari o", "TesteunitariO")]
+        [InlineData("_testeunitario", "Testeunitario")]
+        [InlineData("testeunitario_", "Testeunitario")]
+        [Trait("Category", "Extensions")]
+        public void ToCamelCase_WhenValidText(string text, string formatedText)
+        {
+            var result = text.ToCamelCase();
+            result.Should().Be(formatedText);
+        }
     }
 }

@@ -156,6 +156,8 @@ Console.WriteLine($"this object exists in source list? {result}");
 | string | MaskCharacters(char maskChar, int numCharacters = 0) |
 | bool | HasOnlyDigits() |
 | bool | HasOnlyLetters() |
+| string | ToSnakeCase() |
+| string | ToCamelCase() |
 
 **Match**
 

@@ -143,5 +143,26 @@ namespace Devpack.Extensions.Types
 
             return source.All(char.IsLetter);
         }
+
+        public static string ToSnakeCase(this string text)
+        {
+            if (text.IsNullOrEmpty())
+                return text;
+
+            return string.Concat(text.Select((x, i) => i > 0 && char.IsUpper(x) 
+                ? $"_{x}"
+                : x.ToString())).ToLower();
+        }
+
+        public static string ToCamelCase(this string text)
+        {
+            if (text.IsNullOrWhiteSpace())
+                return text;
+
+            text = text.Replace("_", " ");
+            text = new CultureInfo("pt-br").TextInfo.ToTitleCase(text);
+
+            return text.Replace(" ", string.Empty);
+        }
     }
 }

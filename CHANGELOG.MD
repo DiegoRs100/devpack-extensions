@@ -16,3 +16,8 @@
 
 - Exception methods created;
 - ToDictionary().
+
+## 6.0.4.0 - 2022-12-09
+
+- Create ToSnakeCase method;
+- Create ToCamelCase method.
