@@ -22,7 +22,7 @@
 - Create ToSnakeCase method;
 - Create ToCamelCase method.
 
-## 6.0.5.0 - 2023-01-21
+## 6.0.6.0 - 2023-01-21
 
 - Create GetOnlyDigits method;
 - Create GetOnlyLetters method.
