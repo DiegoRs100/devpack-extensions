@@ -124,7 +124,7 @@ Console.WriteLine($"this object exists in source list? {result}");
 | Return Type | Method |
 | --------------- | ------- |
 | TAttribute? | GetAttribute<TAttribute>() |
-| bool| HasAttribute<TAttribute>() |
+| bool | HasAttribute<TAttribute>() |
 | object? | GetPropertyValue<TCLass>() |
 | TCLass | SetPropertyValue<TCLass>() |
 | object? | GetFieldValue<TCLass>() |
@@ -155,7 +155,9 @@ Console.WriteLine($"this object exists in source list? {result}");
 | string | ToBase64() |
 | string | MaskCharacters(char maskChar, int numCharacters = 0) |
 | bool | HasOnlyDigits() |
+| string | GetOnlyDigits() |
 | bool | HasOnlyLetters() |
+| string | GetOnlyLetters() |
 | string | ToSnakeCase() |
 | string | ToCamelCase() |
 

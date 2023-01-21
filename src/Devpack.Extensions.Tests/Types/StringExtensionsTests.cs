@@ -327,6 +327,18 @@ namespace Devpack.Extensions.Tests.Types
             text.HasOnlyDigits().Should().BeTrue();
         }
 
+        [Theory(DisplayName = "Deve retornar apenas números quando a string informada contém caracteres que não são numéricos.")]
+        [InlineData("abc", Empty)]
+        [InlineData("1.25a", "125")]
+        [InlineData("12 5", "125")]
+        [InlineData("   ", Empty)]
+        [InlineData(null, Empty)]
+        [Trait("Category", "Extensions")]
+        public void GetOnlyDigits(string text, string expected)
+        {
+            text.GetOnlyDigits().Should().Be(expected);
+        }
+
         [Theory(DisplayName = "Deve retornar falso quando a string informada contém caracteres que não são letras.")]
         [InlineData("125")]
         [InlineData("sda1")]
@@ -345,6 +357,18 @@ namespace Devpack.Extensions.Tests.Types
         {
             var text = _faker.Random.String2(10);
             text.HasOnlyLetters().Should().BeTrue();
+        }
+
+        [Theory(DisplayName = "Deve retornar apenas letras quando a string informada contém caracteres que não são letras.")]
+        [InlineData("125", Empty)]
+        [InlineData("sda1", "sda")]
+        [InlineData("d.sda a", "dsdaa")]
+        [InlineData("   ", Empty)]
+        [InlineData(null, Empty)]
+        [Trait("Category", "Extensions")]
+        public void GetOnlyLetters(string text, string expected)
+        {
+            text.GetOnlyLetters().Should().Be(expected);
         }
 
         [Theory(DisplayName = "Deve retornar o valor original do texto quando ele não possuir letras maiúsculas.")]

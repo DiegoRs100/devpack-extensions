@@ -136,12 +136,28 @@ namespace Devpack.Extensions.Types
             return source.All(char.IsDigit);
         }
 
+        public static string GetOnlyDigits(this string source)
+        {
+            if (source.IsNullOrWhiteSpace())
+                return string.Empty;
+
+            return new string(source.Where(char.IsDigit).ToArray());
+        }
+
         public static bool HasOnlyLetters(this string source)
         {
             if (source.IsNullOrEmpty())
                 return false;
 
             return source.All(char.IsLetter);
+        }
+
+        public static string GetOnlyLetters(this string source)
+        {
+            if (source.IsNullOrWhiteSpace())
+                return string.Empty;
+
+            return new string(source.Where(char.IsLetter).ToArray());
         }
 
         public static string ToSnakeCase(this string text)
