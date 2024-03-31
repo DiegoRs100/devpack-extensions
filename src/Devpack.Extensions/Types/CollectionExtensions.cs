@@ -1,6 +1,6 @@
 ﻿namespace Devpack.Extensions.Types
 {
-    public static class IEnumerableExtensions
+    public static class CollectionExtensions
     {
         private const int maxCountIsDuplicated = 1;
 

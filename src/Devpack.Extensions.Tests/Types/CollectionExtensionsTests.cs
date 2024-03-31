@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Devpack.Extensions.Tests.Types
 {
-    public class IEnumerableExtensionsTests : UnitTestBase
+    public class CollectionExtensionsTests : UnitTestBase
     {
         [Fact(DisplayName = "Deve retornar verdadeiro quando uma lista for nula.")]
         [Trait("Category", "Extensions")]

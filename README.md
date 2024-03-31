@@ -30,14 +30,29 @@ public void Execute()
 | Return Type | Method |
 | --------------- | ------- |
 | DateTime | ConvertTimeToSouthAmericaZone() |
+| string | ToOffsetString() |
 
 ### Enum
 
 | Return Type | Method |
 | --------------- | ------- |
 | string | GetDescription() |
+| string | GetDisplayName() |
+| string | ToNumberString() |
 
-### IEnumerable
+### FormFile
+
+| Return Type | Method |
+| --------------- | ------- |
+| string | ToBase64() |
+
+### HttpClient
+
+| Return Type | Method |
+| --------------- | ------- |
+| Task<HttpResponseMessage> | DeleteAsync(string requestUri, HttpContent content, CancellationToken cancellation) |
+
+### ICollection
 
 | Return Type | Method |
 | --------------- | ------- |
@@ -135,6 +150,7 @@ Console.WriteLine($"this object exists in source list? {result}");
 | Return Type | Method |
 | --------------- | ------- |
 | Task<string> | ReadAsStringAsync() |
+| MemoryStream | ToMemoryStream() |
 
 ### String
 
@@ -217,6 +233,12 @@ Console.WriteLine($"Value: {result}.");
     // Output
     // Has value in any? true.
 ```
+
+### HttpClientHelper
+
+| Return Type | Method |
+| --------------- | ------- |
+| StringContent | ParseToStringContent(Object obj) |
 
 ### UrlHelper
 

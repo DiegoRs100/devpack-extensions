@@ -26,3 +26,13 @@
 
 - Create GetOnlyDigits method;
 - Create GetOnlyLetters method.
+
+## 6.0.7.0 - 2024-03-31
+
+- Create HttpClientHelper class and ParseToStringContent method;
+- Create ToOffsetString method;
+- Create GetDisplayName method;
+- Create ToNumberString method;
+- Create FormFileExtensions class and ToBase64 method;
+- Create HttpClientExtensions class and DeleteAsync method;
+- Create ToMemoryStream method;

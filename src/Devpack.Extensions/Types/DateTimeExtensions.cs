@@ -16,5 +16,10 @@ namespace Devpack.Extensions.Types
             var timeZone = TZConvert.GetTimeZoneInfo(timeZoneId);
             return TimeZoneInfo.ConvertTime(dateTime, timeZone);
         }
+
+        public static string ToOffsetString(this DateTime dateTime)
+        {
+            return dateTime.ToString("yyyy-MM-ddTHH:mm:ss");
+        }
     }
 }

@@ -8,15 +8,24 @@ namespace Devpack.Extensions.Tests.Types
 {
     public class DateTimeExtensionsTests : UnitTestBase
     {
-        [Fact(DisplayName = "Deve retornar a data de acordo com o fuso horário de São Paulo " +
-            "quando o método ConvertTimeToSouthAmericaZone for chamado.")]
-        [Trait("Category", "Extensions")]
-        public void ConvertTimeToSouthAmericaZone()
+        [Fact]
+        public void ConvertTimeToSouthAmericaZone_WhenSuccess()
         {
             var utcDate = DateTime.UtcNow;
             var localDate = utcDate.ConvertTimeToSouthAmericaZone();
 
             localDate.Should().Be(utcDate.Subtract(TimeSpan.FromHours(3)));
+        }
+
+        [Fact]
+        public void ToOffsetString_WhenSuccess()
+        {
+            var now = new DateTime(2022, 10, 25, 18, 25, 53, 158, DateTimeKind.Local);
+            var expectedStringDate = $"2022-10-25T18:25:53";
+
+            var stringDate = now.ToOffsetString();
+
+            stringDate.Should().Be(expectedStringDate);
         }
     }
 }

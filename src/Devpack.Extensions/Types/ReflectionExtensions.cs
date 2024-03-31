@@ -24,10 +24,9 @@ namespace Devpack.Extensions.Types
         {
             var propertyInfo = obj.GetType().GetProperty(propertyName, PrivateBindFlags);
 
-            if (propertyInfo == null)
-                throw new InvalidOperationException("The property provided does not exist.");
-
-            return propertyInfo.GetValue(obj);
+            return propertyInfo == null
+                ? throw new InvalidOperationException("The property provided does not exist.")
+                : propertyInfo.GetValue(obj);
         }
 
         public static TCLass SetPropertyValue<TCLass, TReturn>(this TCLass obj, Expression<Func<TCLass, TReturn>> property, TReturn value)
