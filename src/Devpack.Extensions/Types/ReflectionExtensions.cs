@@ -10,7 +10,7 @@ namespace Devpack.Extensions.Types
         public static TAttribute? GetAttribute<TAttribute>(this MemberInfo memberInfo) where TAttribute : Attribute
         {
             if (memberInfo.HasAttribute<TAttribute>())
-                return memberInfo.GetCustomAttributes(typeof(TAttribute), false).First() as TAttribute;
+                return memberInfo.GetCustomAttributes(typeof(TAttribute), false)[0] as TAttribute;
 
             return null;
         }
@@ -66,11 +66,7 @@ namespace Devpack.Extensions.Types
         private static FieldInfo GetFildInfo<TCLass>(this TCLass obj, string fieldName) where TCLass : class
         {
             var fieldInfo = obj.GetType().GetField(fieldName, PrivateBindFlags);
-
-            if (fieldInfo == null)
-                throw new InvalidOperationException("The field provided does not exist.");
-
-            return fieldInfo;
+            return fieldInfo ?? throw new InvalidOperationException("The field provided does not exist.");
         }
     }
 }

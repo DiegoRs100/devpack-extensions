@@ -19,7 +19,7 @@ namespace Devpack.Extensions.Tests.Types
             //Arrange
             var description = "Valor 1";
             var type = typeof(EnumTest);
-            var memberInfo = type.GetMember(EnumTest.Valor1.ToString()).First();
+            var memberInfo = type.GetMember(EnumTest.Valor1.ToString())[0];
 
             //Act
             var result = memberInfo.GetAttribute<DescriptionAttribute>();
@@ -34,7 +34,7 @@ namespace Devpack.Extensions.Tests.Types
         {
             //Arrange
             var type = typeof(EnumTest);
-            var memberInfo = type.GetMember(EnumTest.Valor1.ToString()).First();
+            var memberInfo = type.GetMember(EnumTest.Valor1.ToString())[0];
 
             //Act
             var result = memberInfo.HasAttribute<DescriptionAttribute>();
@@ -49,7 +49,7 @@ namespace Devpack.Extensions.Tests.Types
         {
             //Arrange
             var type = typeof(EnumTest);
-            var memberInfo = type.GetMember(EnumTest.Valor1.ToString()).First();
+            var memberInfo = type.GetMember(EnumTest.Valor1.ToString())[0];
 
             //Act
             var result = memberInfo.HasAttribute<JsonAttribute>();

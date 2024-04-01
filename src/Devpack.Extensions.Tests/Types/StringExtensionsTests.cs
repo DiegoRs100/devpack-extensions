@@ -209,7 +209,7 @@ namespace Devpack.Extensions.Tests.Types
             text = text.ReplaceAll(charsToRemove, string.Empty);
 
             //Act
-            var countCharFound = text.Count(c => charsToRemove.Any(obj => obj.Contains(c)));
+            var countCharFound = text.Count(c => Array.Exists(charsToRemove, obj => obj.Contains(c)));
 
             //Assert
             countCharFound.Should().Be(0);
@@ -226,7 +226,7 @@ namespace Devpack.Extensions.Tests.Types
             text = text.ReplaceAll(charsToRemove, string.Empty);
 
             //Act
-            var countCharFound = text.Count(c => charsToRemove.Any(obj => obj.Contains(c)));
+            var countCharFound = text.Count(c => Array.Exists(charsToRemove, obj => obj.Contains(c)));
 
             //Assert
             countCharFound.Should().Be(0);

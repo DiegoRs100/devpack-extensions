@@ -25,7 +25,7 @@ namespace Devpack.Extensions.Helpers
 
         public static string Combine(params string[] values)
         {
-            values = values.Select(t => t.EndsWith("/") ? t[0..^2] : t).ToArray();
+            values = values.Select(t => t.EndsWith('/') ? t[0..^2] : t).ToArray();
             return string.Join("/", values);
         }
     }
